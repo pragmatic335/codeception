@@ -8,6 +8,8 @@
  * @license http://www.yiiframework.com/license/
  */
 
+use app\models\Username;
+
 defined('YII_DEBUG') or define('YII_DEBUG', true);
 defined('YII_ENV') or define('YII_ENV', 'dev');
 
@@ -18,4 +20,15 @@ $config = require __DIR__ . '/config/console.php';
 
 $application = new yii\console\Application($config);
 $exitCode = $application->run();
+
+
+$user = new Username();
+
+
+$user->name = 'Katya';
+$user->email = 'gmail@gmail';
+
+$user->save();
+
+
 exit($exitCode);

@@ -14,7 +14,9 @@ class TemperatureTest extends \Codeception\Test\Unit
     {
     }
 
-    // tests
+    /** Понятие стаба - это экземпляр обрабатываемого класса, в котором изменены возвращаемые значения методов этого класса, значение его свойств и ....
+     *
+     */
     public function testSomeFeature()
     {
 //        $t = $this->make(\app\services\Temperature::class, [
