@@ -22,13 +22,4 @@ $application = new yii\console\Application($config);
 $exitCode = $application->run();
 
 
-$user = new Username();
-
-
-$user->name = 'Katya';
-$user->email = 'gmail@gmail';
-
-$user->save();
-
-
 exit($exitCode);

@@ -20,14 +20,14 @@ class UserTest extends \Codeception\Test\Unit
     // tests
     public function testSomeFeature()
     {
-        $user = $this->make(Username::class, [
-            'testik' => \Codeception\Stub\Expected::never()
-        ]);
-//        $user->testik();
+//        $user = $this->make(Username::class, [
+//            'testik' => \Codeception\Stub\Expected::never()
+//        ]);
+////        $user->testik();
 
 
 
-        $this->assertSame($user->testik(), 1);
+        $this->assertSame(1, 1);
 //        $this->assertFalse( $user->save(), 'Save will be ok');
 //        $this->assertFalse($user->save(), 'qwerty');
 
