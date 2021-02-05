@@ -27,7 +27,7 @@ class UserTest extends \Codeception\Test\Unit
 
 
 
-//        $this->assertSame($user->testik(), 1);
+        $this->assertSame($user->testik(), 1);
 //        $this->assertFalse( $user->save(), 'Save will be ok');
 //        $this->assertFalse($user->save(), 'qwerty');
 
