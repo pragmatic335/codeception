@@ -8,9 +8,9 @@ modules:
     enabled:
       - Asserts
 #      - \Helper\Unit
-      - Db:
-          dsn: 'sqlite:/../config/base.db'
-          user:
-          password:
+#      - Db:
+#          dsn: 'sqlite:/../config/base.db'
+#          user:
+#          password:
       - Yii2:
             part: [orm, email, fixtures]
