@@ -29,7 +29,7 @@ class UserTest extends \Codeception\Test\Unit
     }
 
     public function testEmailUnique() {
-
+        $a = 'some fixture for 0';
 //        sleep(5);
         $model = new Username([
             'name' => 'Jack',
