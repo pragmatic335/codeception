@@ -14,6 +14,7 @@ class Username extends ActiveRecord
         return [
             [['email', 'name'], 'required'],
             [['email', 'name'], 'string'],
+            ['email', 'unique'],
         ];
     }
 
