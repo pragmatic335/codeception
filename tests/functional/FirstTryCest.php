@@ -15,6 +15,7 @@ class FirstTryCest
 //        $I->fillField('Username', 'Miles');
 //        $I->fillField('Password', 'Davis');
 //        $I->click('Enter');
+        $a = 1;
         $I->see('This is the About page.');
         $I->click('Login');
         $I->see('Username');
