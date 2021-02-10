@@ -9,6 +9,7 @@ class FirstTryCest
     // tests
     public function tryToTest(FunctionalTester $I)
     {
+        $magic_var = 'Hello every day working!!!';
         $I->amOnPage('/');
         $I->click('About');
 //        $I->click('Login');
