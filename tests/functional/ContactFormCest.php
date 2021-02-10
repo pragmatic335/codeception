@@ -26,6 +26,7 @@ class ContactFormCest
 
     public function submitFormWithIncorrectEmail(\FunctionalTester $I)
     {
+        $magic_var = 'again hello';
         $I->submitForm('#contact-form', [
             'ContactForm[name]' => 'tester',
             'ContactForm[email]' => 'tester.email',
