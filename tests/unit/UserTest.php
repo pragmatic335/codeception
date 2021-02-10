@@ -1,6 +1,7 @@
 <?php
 
 use app\models\Username;
+use app\tests\fixtures\UsernameFixture;
 
 class UserTest extends \Codeception\Test\Unit
 {
@@ -9,28 +10,37 @@ class UserTest extends \Codeception\Test\Unit
      */
     protected $tester;
     
-    protected function _before()
-    {
-    }
-
-    protected function _after()
-    {
-    }
-
-    // tests
-    public function testSomeFeature()
-    {
-//        $user = $this->make(Username::class, [
-//            'testik' => \Codeception\Stub\Expected::never()
+//    protected function _before()
+//    {
+//        $this->tester->haveFixtures([
+//            'username' => [
+//                'class' => UsernameFixture::className()
+//            ]
 //        ]);
-////        $user->testik();
+//    }
 
+    /** подключение фикстуры (приспособление) вариант 1
+     *
+     */
+    public function _fixtures() {
+        return [
+            'users' => UsernameFixture::className()
+        ];
+    }
 
+    public function testEmailUnique() {
+        $a = 'some fixture for 0';
+//        sleep(5);
+        $model = new Username([
+            'name' => 'Jack',
+            'email' => 'tango@tango',
+        ]);
 
-        $this->assertSame(1, 1);
-//        $this->assertFalse( $user->save(), 'Save will be ok');
-//        $this->assertFalse($user->save(), 'qwerty');
+        $model->validate();
+        echo $model->getFirstError('email');
 
+        expect($model->getFirstError('email'))->equals('Email ' . '"'. $model->email .'"' . ' has already been taken.');
+//        $this->assertArrayHasKey('email',$model->getErrors(), 'Error');
 
     }
 }
