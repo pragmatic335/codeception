@@ -28,6 +28,7 @@ class UserTest extends \Codeception\Test\Unit
 
 
         $this->assertSame(1, 1);
+        $magin_var= 'hello again :)';
 //        $this->assertFalse( $user->save(), 'Save will be ok');
 //        $this->assertFalse($user->save(), 'qwerty');
 
